@@ -1,0 +1,28 @@
+.change-ui{
+    width:150px;
+    color: black;
+    background-color: white;
+}
+.change-ui:hover{
+    background: #e7e789;
+    cursor:pointer;
+}
+.active{
+    background-color: black;
+}
+#change-type{
+    position: relative;
+    display:inline-block;
+}
+#type{
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    border: 1px solid black;
+    margin: 2px;
+    padding: 15px;
+    transition: width 2s, height 4s;
+}
+#change-type:hover #type{
+    visibility: visible;
+}
