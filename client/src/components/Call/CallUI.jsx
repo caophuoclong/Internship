@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./call.css";
-import axios from "axios";
+import api from "../../api/api";
 import endcall from "../../assets/img/end-call.png";
 import PropTypes from "prop-types";
 import Timer from "../Timer/timer";
@@ -19,9 +19,7 @@ CallUI.defaultProps = {
 function reload() {
   window.location.href = "/";
 }
-const api = axios.create({
-  baseURL: "http://localhost:5000/api",
-});
+
 function CallUI(props) {
   const { phoneNumber, description, sipStatus, endCall } = props;
   const [callAt] = useState(Date.now());

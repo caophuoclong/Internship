@@ -8,6 +8,8 @@ import Uri from "../URI/Uri";
 import Callog from "../Callog/Callog";
 import CallUI from "../Call/CallUI";
 import ReciveCall from "../ReciveCall/ReciveCall";
+const currentSession = null;
+const incomingSession = null;
 var socket = new JsSIP.WebSocketInterface("wss://sbc03.tel4vn.com:7444");
 var configuration = {
   sockets: [socket],
@@ -15,6 +17,20 @@ var configuration = {
   password: "test1108",
 };
 const coolPhone = new JsSIP.UA(configuration);
+coolPhone.on("registered", (data) => {
+  console.log("Status code: " + data.response.status_code);
+});
+coolPhone.on("newRTCSession", (data) => {
+  console.log("On newRTCSession");
+  if (data.originator === "remote") {
+    //incoming call
+    console.log("Incoming call");
+    data.session.answer({ mediaConstraints: { audio: true } });
+  } else {
+    console.log("Outgoing Call");
+  }
+});
+coolPhone.start();
 
 Nav.propTypes = {
   token: PropTypes.string,
@@ -36,46 +52,6 @@ function Nav(props) {
   const [outgoingSession, setOutgoingSession] = useState(null);
   const [currentSession, setCurrentSession] = useState(null);
   const { token } = props;
-
-  coolPhone.start();
-  coolPhone.on("newRTCSession", (data) => {
-    if (data.originator === "remote") {
-      //incoming call
-      console.info("incomingSession, answer the call");
-      setIncomingSession(data.session);
-      //Answer the incoming conversation. This method only applies to incoming sessions.
-      data.session.answer({
-        mediaConstraints: { audio: true, video: true },
-        // 'mediaStream': localStream
-      });
-    } else {
-      console.info("outgoingSession");
-      setOutgoingSession(data.session);
-      outgoingSession.on("connecting", function (data) {
-        console.info("onConnecting - ", data.request);
-        setCurrentSession(outgoingSession);
-        setOutgoingSession(null);
-      });
-    }
-    //Fired when accepting a call
-    data.session.on("accepted", function (data) {
-      console.info("onAccepted - ", data);
-      if (data.originator === "remote" && currentSession == null) {
-        setCurrentSession(incomingSession);
-        setIncomingSession(null);
-        console.info("setCurrentSession - ", currentSession);
-      }
-    });
-    //Fire after confirming the call
-    data.session.on("confirmed", function (data) {
-      console.info("onConfirmed - ", data);
-      if (data.originator == "remote" && currentSession == null) {
-        setCurrentSession(incomingSession);
-        setIncomingSession(null);
-        console.info("setCurrentSession - ", currentSession);
-      }
-    });
-  });
 
   function handleEndCall() {
     coolPhone.stop();
