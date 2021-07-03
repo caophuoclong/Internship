@@ -4,19 +4,19 @@
 
 1. Login form
    - ![Login-form](./assets/login_form.png)
-   - Login you have to give it a second to wakeup server api
+   - Login you have to give it a second to wake up server api
 2. After login you will see a dial pad and nav bar
    - Nav bar
      - ![nav-bar](./assets/nav-bar.png)
      - Keyboard
-       - If hover on keyboard it will show a two options call you must type a number call or SIP uri to call
+       - If hover on keyboard it will show a two options call, you must type a number call or SIP uri to call
        - ![sip-uri-&-dial-pad](./assets/sd.png)
        - Dial pad
          - ![dial-pad](./assets/dial-pad.png)
        - SIP uri
          - ![sip-uri](./assets/sip-uri.png)
    - Call log
-     - Show a history phon number called
+     - Show a history phones number are called
      - ![callog-interface](./assets/callog-interface.png)
    - Dial pad
    - ![dial-pad](./assets/dial-pad.png)
@@ -26,16 +26,16 @@
 
 ## USage
 
+- To test this app but don't need run in local you can access this link [click me to access](https://keen-jennings-4487b7.netlify.app/) **id**: 109 & **password**: test1109
 - In home directory run: "npm install" to install some package requirement for server
 - In client directory run: "npm install" to install some package requirement for client
-- Run command **npm run dev** to start server and client side
-- To test this app but don't need run in local you can access this link [click me to access](https://keen-jennings-4487b7.netlify.app/) **id**: 109 & **password**: test1109
+- Run command **npm run dev** to start server express and client react
 
 ## FrontEnd code with React js
 
 - Sip status
   - Progress: Connect and ringing status
-  - Failed: Connect fail with some status description
+  - Failed: Connect fail with status description
     - Wrong number
     - Busy
     - Cancelled
