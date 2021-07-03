@@ -1,0 +1,95 @@
+
+.Keyboard{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width: 400px;
+    margin: 150px auto;
+    background-color: #e7aeff;
+
+}
+#showNumber{
+    margin-top: 25px;
+    display:flex;
+    flex-direction: row;
+    text-align:center;
+    height: 45px;
+    width: 300px;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 1.5em;
+    align-items:center;
+}
+
+#phoneNumber{
+    text-align:center;
+    font-size: 1.2em;
+    flex-grow: 2;
+    height: 70%;
+    width:70%;
+    margin: 2%;
+    flex-grow: 2;
+    outline: none;
+    border: none;
+}
+#phoneNumber:hover{
+    background: none;
+}
+.button-input:hover{
+    background: #e7e7e7;
+}
+.button-input{
+    border-radius: 20px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    color: white;
+    cursor:pointer;
+}
+
+.Number{
+    align-items:center;
+    justify-content:center;
+    width:300px;
+    margin-top: 25px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+.Number>button{
+    width:30%;
+    text-align:center;
+    height: 80px;
+    font-size: 1.5em;
+    margin: 5px;
+    border: none;
+}
+
+.callPhone{
+    margin-top: 15px;
+    width:80%;
+    height:60px;
+    background-color: green;
+    text-align: center;
+    border-radius: 50px;
+    outline: none;
+}
+p {
+    margin-top: 0px;
+}
+
+#btnClear{
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    cursor: pointer;    
+}
+@media screen and (max-width: 450px){
+    #phoneNumber{
+        width: 50%;
+    }
+}
+
+

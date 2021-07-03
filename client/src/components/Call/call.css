@@ -1,0 +1,57 @@
+.call{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width: 400px;
+    margin: 150px auto;
+    background-color: #e7aeff;
+
+}
+
+.functionKey:hover{
+    background: #e7e7e7;
+}
+.functionKey{
+    margin: 5px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+.iconsFunction{
+    width: 20px;
+}
+/* button{
+    border: white solid 1px;
+    cursor:pointer;
+} */
+#endcallFunction{
+    width:70px;
+    height:70px;
+    background-color:transparent;
+    border:none;
+}
+#endcall:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+#endcall:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+#endcall{
+    background-color: white;
+    border-radius: 100%;
+    width: 50px;
+}
