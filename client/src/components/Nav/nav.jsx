@@ -8,13 +8,11 @@ import Uri from "../URI/Uri";
 import Callog from "../Callog/Callog";
 import CallUI from "../Call/CallUI";
 import ReciveCall from "../ReciveCall/ReciveCall";
-const currentSession = null;
-const incomingSession = null;
 var socket = new JsSIP.WebSocketInterface("wss://sbc03.tel4vn.com:7444");
 var configuration = {
   sockets: [socket],
-  uri: `108@2-test1.gcalls.vn:50061`,
-  password: "test1108",
+  uri: `109@2-test1.gcalls.vn:50061`,
+  password: "test1109",
 };
 const coolPhone = new JsSIP.UA(configuration);
 coolPhone.on("registered", (data) => {
@@ -48,9 +46,6 @@ function Nav(props) {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
   const [reciveCall, setReciveCall] = useState(false);
-  const [incomingSession, setIncomingSession] = useState(null);
-  const [outgoingSession, setOutgoingSession] = useState(null);
-  const [currentSession, setCurrentSession] = useState(null);
   const { token } = props;
 
   function handleEndCall() {

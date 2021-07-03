@@ -22,6 +22,8 @@ function reload() {
 
 function CallUI(props) {
   const { phoneNumber, description, sipStatus, endCall } = props;
+  const [saveDB, setSaveDB] = useState(false);
+
   const [callAt] = useState(Date.now());
   let callEnd = "";
   if (sipStatus === "failed" || sipStatus === "canceled") {
@@ -37,8 +39,7 @@ function CallUI(props) {
           callStatus: sipStatus,
           statusDescription: description,
         };
-        const response = await api.post("/createacallog", params);
-        console.log(response);
+        await api.post("/createacallog", params);
       };
 
       saveDB();
@@ -51,52 +52,89 @@ function CallUI(props) {
   function handleEndCall() {
     if (endCall) {
       endCall();
+      setSaveDB(true);
     }
   }
 
   if (description !== "") {
-    return (
-      <div className="call">
-        <h3>{phoneNumber}</h3>
-        <h4>{sipStatus}</h4>
-        <h5>{description}</h5>
-        <div className="function">
-          <button className="functionKey" id="mute">
-            <img
-              className="iconsFunction"
-              alt="xinchao"
-              src="https://img.icons8.com/ios-filled/50/000000/room-sound.png"
-            />{" "}
-          </button>
-          <button className="functionKey" id="keyboard">
-            <img
-              className="iconsFunction"
-              alt="xinchao"
-              src="https://img.icons8.com/metro/26/000000/pincode-keyboard.png"
-            />
-          </button>
+    if (!saveDB) {
+      return (
+        <div className="call">
+          <h3>{phoneNumber}</h3>
+          <h4>{sipStatus}</h4>
+          <h5>{description}</h5>
+          <div className="function">
+            <button className="functionKey" id="mute">
+              <img
+                className="iconsFunction"
+                alt="xinchao"
+                src="https://img.icons8.com/ios-filled/50/000000/room-sound.png"
+              />{" "}
+            </button>
+            <button className="functionKey" id="keyboard">
+              <img
+                className="iconsFunction"
+                alt="xinchao"
+                src="https://img.icons8.com/metro/26/000000/pincode-keyboard.png"
+              />
+            </button>
 
-          <button className="functionKey" id="pause">
-            <img
-              className="iconsFunction"
-              alt="xinchao"
-              src="https://img.icons8.com/ios-filled/50/000000/pause--v1.png"
-            />
+            <button className="functionKey" id="pause">
+              <img
+                className="iconsFunction"
+                alt="xinchao"
+                src="https://img.icons8.com/ios-filled/50/000000/pause--v1.png"
+              />
+            </button>
+          </div>
+
+          <button onClick={handleEndCall} id="endcallFunction">
+            <img alt="endcall" id="endcall" src={endcall} />
+          </button>
+          {/* <button className="returnHome" onClick={reload}>
+            {" "}
+            Return home{" "}
+          </button> */}
+        </div>
+      );
+    } else {
+      return (
+        <div className="call">
+          <h3>{phoneNumber}</h3>
+          <h4>{sipStatus}</h4>
+          <h5>{description}</h5>
+          <div className="function">
+            <button className="functionKey" id="mute">
+              <img
+                className="iconsFunction"
+                alt="xinchao"
+                src="https://img.icons8.com/ios-filled/50/000000/room-sound.png"
+              />{" "}
+            </button>
+            <button className="functionKey" id="keyboard">
+              <img
+                className="iconsFunction"
+                alt="xinchao"
+                src="https://img.icons8.com/metro/26/000000/pincode-keyboard.png"
+              />
+            </button>
+
+            <button className="functionKey" id="pause">
+              <img
+                className="iconsFunction"
+                alt="xinchao"
+                src="https://img.icons8.com/ios-filled/50/000000/pause--v1.png"
+              />
+            </button>
+          </div>
+          {handleSaveDB()}
+          <button className="returnHome" onClick={reload}>
+            {" "}
+            Return home{" "}
           </button>
         </div>
-
-        <button
-          onClick={() => {
-            handleEndCall();
-            handleSaveDB();
-            reload();
-          }}
-          id="endcallFunction"
-        >
-          <img alt="endcall" id="endcall" src={endcall} />
-        </button>
-      </div>
-    );
+      );
+    }
   }
   if (sipStatus === "confirmed") {
     return (
@@ -129,7 +167,12 @@ function CallUI(props) {
             />
           </button>
         </div>
-        <button onClick={handleEndCall} id="endcallFunction">
+        <button
+          onClick={() => {
+            handleEndCall();
+          }}
+          id="endcallFunction"
+        >
           <img alt="endcall" id="endcall" src={endcall} />
         </button>
       </div>
@@ -163,7 +206,9 @@ function CallUI(props) {
         </button>
       </div>
       <button
-        onClick={handleEndCall}
+        onClick={() => {
+          handleEndCall();
+        }}
         id="endcallFunction"
         style={{ cursor: "pointer" }}
       >

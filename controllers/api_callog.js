@@ -1,7 +1,7 @@
 const Callog = require("../models/callog");
 module.exports = {
   createAcallog: async (req, res) => {
-    console.log(req.body);
+    console.log(req);
     const { phoneNumber, callStatus, statusDescription, callAt, callEnd } =
       req.body;
     try {

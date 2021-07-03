@@ -5,6 +5,7 @@ const api_callog = require("../controllers/api_callog");
 const api_auth = require("../controllers/api_auth");
 
 api.post("/createacallog", api_callog.createAcallog);
+api.options("/createacallog", api_callog.createAcallog);
 api.get("/createacallog", api_callog.testApi);
 api.get("/testapi", api_callog.testApi);
 api.get("/showcallog", api_callog.showAcallog);

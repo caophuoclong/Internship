@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import queryString from "query-string";
 import axios from "axios";
+import api from "../../api/api";
 import PropTypes from "prop-types";
 
 Login.propTypes = {
@@ -16,8 +17,7 @@ function Login(props) {
 
   const handleOnSubmit = async (data, e) => {
     e.preventDefault();
-    const uri = "http://localhost:5000/api/auth/login";
-    const response = await axios.post(uri, data);
+    const response = await api.post("/auth/login", data);
     setToken(response.data);
   };
 
