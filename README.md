@@ -33,6 +33,23 @@
 
 ## FrontEnd code with React js
 
+- Sip status
+  - Progress: Connect and ringing status
+  - Failed: Connect fail with some status description
+    - Wrong number
+    - Busy
+    - Cancelled
+  - Confirmed: Access accepted
+  - Ended: End of call session
+    - Terminated
+
+### Feature:
+
+- Make a call by phone number
+- Make a call by SIP uri
+
+## BackEnd code with Nodejs
+
 - Server to rest API
 - API:
   1. Login
@@ -53,22 +70,9 @@
            - Terminated
        - callAt => Timestamp at call start
        - callEnd => Timestamp at call end
-
-### Feature:
-
-- Make a call by phone number
-- Make a call by SIP uri
-
-  - Sip status
-    - Progress: Connect and ringing status
-    - Failed: Connect fail with some status description
-      - Wrong number
-      - Busy
-      - Cancelled
-    - Confirmed: Access accepted
-    - Ended: End of call session
-      - Terminated
-
-## BackEnd code with Nodejs
+  4. showAcallog
 
 ## Database MongoDB
+
+- User collection
+- Callog collection
