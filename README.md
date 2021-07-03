@@ -8,14 +8,18 @@
 2. After login you will see a dial pad and nav bar
    - Nav bar
      - ![nav-bar](./assets/nav-bar.png)
-     - If hover on keyboard it will show a two options call you must type a number call or SIP uri to call
+     - Keyboard
+       - If hover on keyboard it will show a two options call you must type a number call or SIP uri to call
        - ![sip-uri-&-dial-pad](./assets/sd.png)
        - Dial pad
          - ![dial-pad](./assets/dial-pad.png)
        - SIP uri
          - ![sip-uri](./assets/sip-uri.png)
+   - Call log
+     - Show a history phon number called
+     - ![callog-interface](./assets/callog-interface.png)
    - Dial pad
-   - ![dial-pad] (./assets/dial-pad.png)
+   - ![dial-pad](./assets/dial-pad.png)
 3. After click on button call it will show call interface
    - Call interface
      - ![call-interface](./assets/call-interface.png)
