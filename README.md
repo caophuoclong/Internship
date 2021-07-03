@@ -33,6 +33,27 @@
 
 ## FrontEnd code with React js
 
+- Server to rest API
+- API:
+  1. Login
+     - Login with id and password
+  2. Register
+     - Register with id, password and must have serect key admin
+  3. createacallog
+     - Store call history after call with
+       - phoneNumber => Include phone number and SIP uri
+       - sipStatus => Include progress, failed, confirmed, ended
+       - statusDescription
+         - Failed
+           - Wrong number
+           - SIP failed code
+           - Canceled
+           - Busy
+         - Ended
+           - Terminated
+       - callAt => Timestamp at call start
+       - callEnd => Timestamp at call end
+
 ### Feature:
 
 - Make a call by phone number
