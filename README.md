@@ -1,11 +1,15 @@
 # Test Internship
 
+## Introduction
+
+1. ![Login-form](./assets/login_form.png)
+
 ## USage
 
 - In home directory run: "npm install" to install some package requirement for server
 - In client directory run: "npm install" to install some package requirement for client
 - Run command **npm run dev** to start server and client side
-- To test this app but don't need run in local you can access this link [click me to access](https://keen-jennings-4487b7.netlify.app/)
+- To test this app but don't need run in local you can access this link [click me to access](https://keen-jennings-4487b7.netlify.app/) **id**: 109 & **password**: test1109
 
 ## FrontEnd code with React js
 
