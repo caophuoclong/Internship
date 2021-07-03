@@ -1,5 +1,11 @@
 # Test Internship
 
+## USage
+
+- In home directory run: "npm install" to install some package requirement for server
+- In client directory run: "npm install" to install some package requirement for client
+- Run command **npm run dev** to start server and client side
+
 ## FrontEnd code with React js
 
 ### Feature:
