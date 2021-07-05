@@ -24,6 +24,8 @@ function CallUI(props) {
   const { phoneNumber, description, sipStatus, endCall } = props;
   const [callAt] = useState(Date.now());
   let callEnd = "";
+  const status = sipStatus === "progress" ? "Ringing" : sipStatus;
+  console.log(status);
   if (sipStatus === "failed" || sipStatus === "canceled") {
     callEnd = Date.now();
   }
@@ -58,7 +60,7 @@ function CallUI(props) {
     return (
       <div className="call">
         <h3>{phoneNumber}</h3>
-        <h4>{sipStatus}</h4>
+        <h4>{status}</h4>
         <h5>{description}</h5>
         <div className="function">
           <button className="functionKey" id="mute">
@@ -102,7 +104,7 @@ function CallUI(props) {
     return (
       <div className="call">
         <h3>{phoneNumber}</h3>
-        <h4>{sipStatus}</h4>
+        <h4>{status}</h4>
         <h5>
           <Timer />
         </h5>
@@ -138,7 +140,7 @@ function CallUI(props) {
   return (
     <div className="call">
       <h3>{phoneNumber}</h3>
-      <h4>{sipStatus}</h4>
+      <h4>{status}</h4>
       <div className="function">
         <button className="functionKey" id="mute">
           <img

@@ -16,7 +16,7 @@ function Login(props) {
 
   const handleOnSubmit = async (data, e) => {
     e.preventDefault();
-    const uri = "http://localhost:5000/api/auth/login";
+    const uri = "https://api-server-intern.herokuapp.com/api/auth/login";
     const response = await axios.post(uri, data);
     setToken(response.data);
   };
