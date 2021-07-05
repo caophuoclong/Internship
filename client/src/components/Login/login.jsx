@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import queryString from "query-string";
-import axios from "axios";
 import PropTypes from "prop-types";
+import React from "react";
+import { useForm } from "react-hook-form";
+import api from "../../api/api";
+
+import './login.scss'
 
 Login.propTypes = {
   setToken: PropTypes.func,
@@ -17,21 +18,31 @@ function Login(props) {
   const handleOnSubmit = async (data, e) => {
     e.preventDefault();
     const uri = "https://api-server-intern.herokuapp.com/api/auth/login";
-    const response = await axios.post(uri, data);
+    const response = await api.post(uri, data);
     setToken(response.data);
   };
 
   return (
-    <form onSubmit={handleSubmit(handleOnSubmit)}>
-      <input {...register("id")} placeholder="id" />
+    <div className="login-form">
+      <h1>Login Form</h1>
+      <form onSubmit={handleSubmit(handleOnSubmit)}>
+      <div>
+      <input {...register("id")} placeholder="id" id="id"/>
+      </div>
+      <div>
       <input
         {...register("pass")}
         name="pass"
         id="pass"
-        placeholder="passowrd"
+        placeholder="password"
       />
+      </div>
+      <div style={{textAlign: "center", margin: "15px"}}>
       <input type="submit" value="Submit" />
+      </div>
     </form>
+    </div>
+    
   );
 }
 
