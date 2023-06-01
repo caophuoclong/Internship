@@ -1,0 +1,11 @@
+export const TEST="TEST";
+export const LOGOUT="LOGOUT";
+export const SET_SIP="SET_SIP";
+export const SET_PHONE_NUMBER="SET_PHONE_NUMBER";
+export const SET_SCREEN=   "SET_SCREEN";
+export const SET_SIP_STATUS = "SET_SIP_STATUS";
+export const SET_CALL = "SET_CALL"
+export const SET_CALL_PROPERTY = "SET_CALL_PROPERTY"
+export const SET_SESSION = "SET_SESSION"
+export const SET_CALL_STATUS = "SET_CALL_STATUS"
+export const SET_UA="SET_UA";

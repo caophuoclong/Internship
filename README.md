@@ -1,80 +1,70 @@
-# Test Internship
+# Getting Started with Create React App
 
-## Introduction
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-1. Login form
-   - ![Login-form](./assets/login_form.png)
-   - Login you have to give it a second to wake up server api
-2. After login you will see a dial pad and nav bar
-   - Nav bar
-     - ![nav-bar](./assets/nav-bar.png)
-     - Keyboard
-       - If hover on keyboard it will show a two options call, you must type a number call or SIP uri to call
-       - ![sip-uri-&-dial-pad](./assets/sd.png)
-       - Dial pad
-         - ![dial-pad](./assets/dial-pad.png)
-       - SIP uri
-         - ![sip-uri](./assets/sip-uri.png)
-   - Call log
-     - Show a history phones number are called
-     - ![callog-interface](./assets/callog-interface.png)
-   - Dial pad
-   - ![dial-pad](./assets/dial-pad.png)
-3. After click on button call it will show call interface
-   - Call interface
-     - ![call-interface](./assets/call-interface.png)
+## Available Scripts
 
-## USage
+In the project directory, you can run:
 
-- To test this app but don't need run in local you can access this link [click me to access](https://keen-jennings-4487b7.netlify.app/) **id**: 109 & **password**: test1109
-- In home directory run: "npm install" to install some package requirement for server
-- In client directory run: "npm install" to install some package requirement for client
-- Run command **npm run dev** to start server express and client react
+### `npm start`
 
-## FrontEnd code with React js
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- Sip status
-  - Progress: Connect and ringing status
-  - Failed: Connect fail with status description
-    - Wrong number
-    - Busy
-    - Cancelled
-  - Confirmed: Access accepted
-  - Ended: End of call session
-    - Terminated
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Feature:
+### `npm test`
 
-- Make a call by phone number
-- Make a call by SIP uri
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## BackEnd code with Nodejs
+### `npm run build`
 
-- Server to rest API
-- API:
-  1. Login
-     - Login with id and password
-  2. Register
-     - Register with id, password and must have serect key admin
-  3. createacallog
-     - Store call history after call with
-       - phoneNumber => Include phone number and SIP uri
-       - sipStatus => Include progress, failed, confirmed, ended
-       - statusDescription
-         - Failed
-           - Wrong number
-           - SIP failed code
-           - Canceled
-           - Busy
-         - Ended
-           - Terminated
-       - callAt => Timestamp at call start
-       - callEnd => Timestamp at call end
-  4. showAcallog
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Database MongoDB
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- User collection
-- Callog collection
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# HAVE A GOOD DAY
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

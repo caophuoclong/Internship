@@ -1,0 +1,43 @@
+bundle.js:1312 newRTCSession {originator: 'remote', session: RTCSession, request: IncomingRequest}
+main.9f3f5fbbc28d773de58a.hot-update.js:95 newRTCSession {originator: 'remote', session: RTCSession, request: IncomingRequest}
+main.9f3f5fbbc28d773de58a.hot-update.js:68 Progress {originator: 'local', response: null}
+main.9f3f5fbbc28d773de58a.hot-update.js:95 newRTCSession {originator: 'remote', session: RTCSession, request: IncomingRequest}
+main.9f3f5fbbc28d773de58a.hot-update.js:68 Progress {originator: 'local', response: null}originator: "local"response: null[[Prototype]]: Object
+main.9f3f5fbbc28d773de58a.hot-update.js:95 newRTCSession {originator: 'remote', session: RTCSession, request: IncomingRequest}
+main.9f3f5fbbc28d773de58a.hot-update.js:68 Progress {originator: 'local', response: null}
+main.9f3f5fbbc28d773de58a.hot-update.js:71 Failed {originator: 'remote', message: IncomingRequest, cause: 'Canceled'}cause: "Canceled"message: IncomingRequest {data: 'CANCEL sip:v1kn59dl@6vrtsvlb2k2e.invalid;transport…EL"\r\nUser-Agent: PITEL SBC\r\nContent-Length: 0\r\n\r\n', headers: {…}, method: 'CANCEL', via: {…}, via_branch: 'z9hG4bK51eb.27b45a01.0', …}originator: "remote"[[Prototype]]: Object
+main.9f3f5fbbc28d773de58a.hot-update.js:71 Failed {originator: 'remote', message: IncomingRequest, cause: 'Canceled'}
+main.9f3f5fbbc28d773de58a.hot-update.js:71 Failed {originator: 'remote', message: IncomingRequest, cause: 'Canceled'}
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+bundle.js:1312 newRTCSession {originator: 'remote', session: RTCSession, request: IncomingRequest}originator: "remote"request: IncomingRequest {data: 'INVITE sip:v1kn59dl@6vrtsvlb2k2e.invalid;transport…yYS 2 UDP 2130706430 27.71.232.1 31591 typ host\r\n', headers: {…}, method: 'INVITE', via: {…}, via_branch: 'z9hG4bKe4a.8132378.0', …}session: RTCSession_audioMuted: false_cancel_reason: ""_connection: null_connectionPromiseQueue: Promise {<fulfilled>: undefined}_contact: "<sip:v1kn59dl@6vrtsvlb2k2e.invalid;transport=ws>"_data: {}_dialog: null_direction: "incoming"_earlyDialogs: {}_end_time: null_events: {progress: ƒ, failed: ƒ, confirmed: ƒ, ended: ƒ}_eventsCount: 4_from_tag: "rFQg5t607Kpac"_iceReady: false_id: "73aa6569-7b04-123c-4589-005056038107rFQg5t607Kpac"_is_canceled: false_is_confirmed: false_late_sdp: false_localHold: false_localMediaStream: null_localMediaStreamLocallyGenerated: false_local_identity: NameAddrHeader {_uri: URI, _parameters: {…}, _display_name: undefined}_maxListeners: undefined_referSubscribers: {}_remoteHold: false_remote_identity: NameAddrHeader {_uri: URI, _parameters: {…}, _display_name: '0326031442'}_request: IncomingRequest {data: 'INVITE sip:v1kn59dl@6vrtsvlb2k2e.invalid;transport…yYS 2 UDP 2130706430 27.71.232.1 31591 typ host\r\n', headers: {…}, method: 'INVITE', via: {…}, via_branch: 'z9hG4bKe4a.8132378.0', …}_rtcAnswerConstraints: null_rtcOfferConstraints: null_rtcReady: true_sessionTimers: {enabled: true, refreshMethod: 'UPDATE', defaultExpires: 90, currentExpires: null, running: false, …}_start_time: null_status: 8_timers: {ackTimer: null, expiresTimer: null, invite2xxTimer: null, userNoAnswerTimer: 259}_to_tag: null_tones: null_ua: UA {_events: {…}, _eventsCount: 5, _maxListeners: undefined, _cache: {…}, _configuration: {…}, …}_videoMuted: falseC: (...)causes: (...)connection: (...)contact: (...)data: (...)direction: (...)end_time: (...)id: (...)local_identity: (...)remote_identity: (...)start_time: (...)status: (...)[[Prototype]]: EventEmitter[[Prototype]]: Object
+main.9f3f5fbbc28d773de58a.hot-update.js:95 newRTCSession {originator: 'remote', session: RTCSession, request: IncomingRequest}
+main.9f3f5fbbc28d773de58a.hot-update.js:68 Progress {originator: 'local', response: null}
+main.9f3f5fbbc28d773de58a.hot-update.js:95 newRTCSession {originator: 'remote', session: RTCSession, request: IncomingRequest}
+main.9f3f5fbbc28d773de58a.hot-update.js:68 Progress {originator: 'local', response: null}originator: "local"response: null[[Prototype]]: Object
+main.9f3f5fbbc28d773de58a.hot-update.js:95 newRTCSession {originator: 'remote', session: RTCSession, request: IncomingRequest}
+main.9f3f5fbbc28d773de58a.hot-update.js:68 Progress {originator: 'local', response: null}
+main.9f3f5fbbc28d773de58a.hot-update.js:71 Failed {originator: 'remote', message: IncomingRequest, cause: 'Canceled'}cause: "Canceled"message: IncomingRequestbody: ""call_id: "73aa6569-7b04-123c-4589-005056038107"cseq: 68252694data: "CANCEL sip:v1kn59dl@6vrtsvlb2k2e.invalid;transport=ws SIP/2.0\r\nVia: SIP/2.0/WSS 27.71.232.125:7444;branch=z9hG4bKe4a.8132378.0\r\nFrom: \"0326031442\" <sip:0326031442@2-gcalls.gcalls.vn>;tag=rFQg5t607Kpac\r\nCall-ID: 73aa6569-7b04-123c-4589-005056038107\r\nTo: <sip:v1kn59dl@27.71.232.125:5060;ctid=349732658563055783>\r\nCSeq: 68252694 CANCEL\r\nMax-Forwards: 70\r\nReason: SIP;cause=487;text=\"ORIGINATOR_CANCEL\"\r\nUser-Agent: PITEL SBC\r\nContent-Length: 0\r\n\r\n"from: NameAddrHeader {_uri: URI, _parameters: {…}, _display_name: '0326031442'}from_tag: "rFQg5t607Kpac"headers: {Via: Array(1), From: Array(1), Call-ID: Array(1), To: Array(1), CSeq: Array(1), …}method: "CANCEL"ruri: URI {_parameters: {…}, _headers: {…}, _scheme: 'sip', _user: 'v1kn59dl', _host: '6vrtsvlb2k2e.invalid', …}sdp: nullserver_transaction: nullto: NameAddrHeader {_uri: URI, _parameters: {…}, _display_name: undefined}to_tag: undefinedtransport: Transport {status: 0, socket: WebSocketInterface, sockets: Array(1), recovery_options: {…}, recover_attempts: 0, …}ua: UA {_events: {…}, _eventsCount: 5, _maxListeners: undefined, _cache: {…}, _configuration: {…}, …}via: {protocol: 'SIP', transport: 'WSS', host_type: 'IPv4', host: '27.71.232.125', port: 7444, …}via_branch: "z9hG4bKe4a.8132378.0"[[Prototype]]: IncomingMessageoriginator: "remote"[[Prototype]]: Object
+main.9f3f5fbbc28d773de58a.hot-update.js:71 Failed {originator: 'remote', message: IncomingRequest, cause: 'Canceled'}
+main.9f3f5fbbc28d773de58a.hot-update.js:71 Failed {originator: 'remote', message: IncomingRequest, cause: 'Canceled'}cause: "Canceled"message: IncomingRequest {data: 'CANCEL sip:qgligqd2@6vrtsvlb2k2e.invalid;transport…EL"\r\nUser-Agent: PITEL SBC\r\nContent-Length: 0\r\n\r\n', headers: {…}, method: 'CANCEL', via: {…}, via_branch: 'z9hG4bK0dc4.999f3fd2.0', …}originator: "remote"[[Prototype]]: Object
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+index.jsx:51 Connected {socket: Transport}
+index.jsx:51 Connected {socket: Transport}
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
+index.jsx:51 Connected {socket: Transport}
+index.jsx:51 Connected {socket: Transport}
+addCallbox.js:67 undefined 'http://localhost:3000'
+addCallbox.js:67 undefined 'http://localhost:3000'
