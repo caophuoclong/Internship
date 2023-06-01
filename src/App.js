@@ -8,6 +8,7 @@ import RegisterSIP from './components/RegisterSIP';
 import Phoning from './components/CallBox/Phoning';
 import Receiving from './components/CallBox/Receiving';
 import Init from './components/Init';
+import {isMobile} from "react-device-detect"
 function App() {
   const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ function App() {
   ]);
   return (
     <ContextProvider>
-      <div className="w-[400px] h-[600px] bg-[#673AB7] rounded-lg text-white">
+      <div className={`w-[400px] ${isMobile ? "h-screen" : "h-[600px]"} bg-[#673AB7] rounded-lg text-white`}>
         <RouterProvider router={router} />
       </div>
     </ContextProvider>
