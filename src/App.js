@@ -32,7 +32,7 @@ function App() {
   ]);
   return (
     <ContextProvider>
-      <div className={`w-[400px] ${isMobile ? "h-screen" : "h-[600px]"} bg-[#673AB7] rounded-lg text-white`}>
+      <div className={`w-[400px] ${isMobile ? "h-screen" : "h-[600px]"} bg-[#673AB7] text-white`}>
         <RouterProvider router={router} />
       </div>
     </ContextProvider>
